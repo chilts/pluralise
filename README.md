@@ -21,7 +21,7 @@ There are two functions for two general cases. The first case is when you just w
 ```js
 pluralise(0, 'book') // -> 'books'
 pluralise(1, 'book') // -> 'book'
-pluralise(2, 'book') // -> 'book'
+pluralise(2, 'book') // -> 'books'
 ```
 
 Just passing the `count` and the `singular` version of the word will result in just the word (if count is 1)
@@ -47,13 +47,19 @@ pluralise(2, '% wolf', '% wolves', 'no wolves') // -> '2 wolves'
 ```
 
 If you have a regular plural such as 'item' and 'items', then you just miss the `plural` out. It will take on the
-singular form with an added 's':
+singular form with an added 's' (or just pass the singular form twice):
 
 ```js
 pluralise(0, '% horse', null, 'no horses') // -> 'no horses'
 pluralise(1, '% horse', null, 'no horses') // -> '1 horse'
 pluralise(2, '% horse', null, 'no horses') // -> '2 horses'
+
+pluralise(0, '% horse', '% horse', 'no horses') // -> 'no horses'
+pluralise(1, '% horse', '% horse', 'no horses') // -> '1 horse'
+pluralise(2, '% horse', '% horse', 'no horses') // -> '2 horses'
 ```
+
+That's all `pluralise(Infinity, 'folk')`.
 
 ## Lodash ##
 
