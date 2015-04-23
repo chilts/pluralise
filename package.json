@@ -1,0 +1,33 @@
+{
+  "name": "plurals",
+  "description": "Plurals for the masses.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tape": "^4.0.0"
+  },
+  "homepage": "https://github.com/chilts/pluralise",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:chilts/pluralise.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chilts/pluralise/issues"
+  },
+  "author": {
+    "name": "Andrew Chilton",
+    "email": "andychilton@gmail.com",
+    "url": "http://chilts.org/"
+  },
+  "keywords": [
+    "plural",
+    "plurals",
+    "pluralise",
+    "pluralize"
+  ]
+}
