@@ -41,22 +41,22 @@ want to say something different when you have no things. For example you might s
 wolves'. Just use the `%` symbol for where you would like the number to appear:
 
 ```js
-pluralise(0, '% wolf', '% wolves', 'no wolves') // -> 'no wolves'
-pluralise(1, '% wolf', '% wolves', 'no wolves') // -> '1 wolf'
-pluralise(2, '% wolf', '% wolves', 'no wolves') // -> '2 wolves'
+pluralise.withCount(0, '% wolf', '% wolves', 'no wolves') // -> 'no wolves'
+pluralise.withCount(1, '% wolf', '% wolves', 'no wolves') // -> '1 wolf'
+pluralise.withCount(2, '% wolf', '% wolves', 'no wolves') // -> '2 wolves'
 ```
 
 If you have a regular plural such as 'item' and 'items', then you just miss the `plural` out. It will take on the
 singular form with an added 's' (or just pass the singular form twice):
 
 ```js
-pluralise(0, '% horse', null, 'no horses') // -> 'no horses'
-pluralise(1, '% horse', null, 'no horses') // -> '1 horse'
-pluralise(2, '% horse', null, 'no horses') // -> '2 horses'
+pluralise.withCount(0, '% horse', null, 'no horses') // -> 'no horses'
+pluralise.withCount(1, '% horse', null, 'no horses') // -> '1 horse'
+pluralise.withCount(2, '% horse', null, 'no horses') // -> '2 horses'
 
-pluralise(0, '% horse', '% horse', 'no horses') // -> 'no horses'
-pluralise(1, '% horse', '% horse', 'no horses') // -> '1 horse'
-pluralise(2, '% horse', '% horse', 'no horses') // -> '2 horses'
+pluralise.withCount(0, '% horse', '% horse', 'no horses') // -> 'no horses'
+pluralise.withCount(1, '% horse', '% horse', 'no horses') // -> '1 horse'
+pluralise.withCount(2, '% horse', '% horse', 'no horses') // -> '2 horses'
 ```
 
 That's all `pluralise(Infinity, 'folk')`.
@@ -80,6 +80,8 @@ module.exports = {
 Which you can then use as follows:
 
 ```js
+var plurals = require('path/to/above-file.js')
+
 var cows = 3
 
 console.log('Farmer Brown has %d %s', cows, plurals.cow(cows))
