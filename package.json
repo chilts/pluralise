@@ -9,7 +9,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "tape": "^4.2.1"
+    "tape": "^4.10.2"
   },
   "homepage": "https://github.com/chilts/pluralise",
   "repository": {

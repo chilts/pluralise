@@ -2,6 +2,11 @@
 
 This package does one thing simply. It does not try to be clever.
 
+This package is considered STABLE therefore may not be updated frequently. It works really well, is small, and there
+are no open issues. It is used in a number of projects (hence the download count). Please use with all your might but
+let me know if you find any bugs. Bugs will be fixed and published quickly. :) Thanks,
+[@andychilton](https://twitter.com/andychilton).
+
 ## Install ##
 
 ```sh
@@ -13,7 +18,7 @@ npm install --save pluralise
 Firstly, require the library:
 
 ```js
-var pluralise = require('pluralise')
+const pluralise = require('pluralise')
 ```
 
 There are two functions for two general cases. The first case is when you just want the plural of a word:
@@ -67,8 +72,8 @@ With [lodash](https://www.npmjs.com/package/lodash), you can `.partialRight()` s
 as this:
 
 ```js
-var lodash = require('lodash')
-var pluralise = require('pluralise')
+const lodash = require('lodash')
+const pluralise = require('pluralise')
 
 module.exports = {
   cow   : lodash.partialRight(pluralise, 'cow'),
@@ -80,9 +85,9 @@ module.exports = {
 Which you can then use as follows:
 
 ```js
-var plurals = require('path/to/above-file.js')
+const plurals = require('path/to/above-file.js')
 
-var cows = 3
+const cows = 3
 
 console.log('Farmer Brown has %d %s', cows, plurals.cow(cows))
 // -> 'Farmer Brown has 3 cows'
@@ -100,10 +105,36 @@ module.exports = {
 
 ## Author ##
 
-Written by [Andrew Chilton](http://chilts.org/):
+```
+$ npx chilts
 
-* [Twitter](https://twitter.com/andychilton)
-* [GitHub](https://github.com/chilts/)
+   ╒════════════════════════════════════════════════════╕
+   │                                                    │
+   │   Andrew Chilton (Personal)                        │
+   │   -------------------------                        │
+   │                                                    │
+   │          Email : andychilton@gmail.com             │
+   │            Web : https://chilts.org                │
+   │        Twitter : https://twitter.com/andychilton   │
+   │         GitHub : https://github.com/chilts         │
+   │         GitLab : https://gitlab.org/chilts         │
+   │                                                    │
+   │   Apps Attic Ltd (My Company)                      │
+   │   ---------------------------                      │
+   │                                                    │
+   │          Email : chilts@appsattic.com              │
+   │            Web : https://appsattic.com             │
+   │        Twitter : https://twitter.com/AppsAttic     │
+   │         GitLab : https://gitlab.com/appsattic      │
+   │                                                    │
+   │   Node.js / npm                                    │
+   │   -------------                                    │
+   │                                                    │
+   │        Profile : https://www.npmjs.com/~chilts     │
+   │           Card : $ npx chilts                      │
+   │                                                    │
+   ╘════════════════════════════════════════════════════╛
+```
 
 ## License ##
 
